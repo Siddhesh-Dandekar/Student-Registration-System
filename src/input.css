@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.title {
+  font-family: "Bungee Tint", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.new-amsterdam-regular {
+  font-family: "New Amsterdam", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#nav-section {
+  background-image: url('https://cdnb.artstation.com/p/assets/images/images/072/044/267/large/xebelion-40.jpg?1706522573');
+}
+
+#main-section {
+  background-image: url('https://cdna.artstation.com/p/assets/images/images/072/044/254/large/xebelion-39.jpg?1706522555');
+  border: 1px solid rgb(255, 248, 248);
+}
+
+.table {
+  border-spacing: 0 15px;
+}
+
+i {
+  font-size: 1rem !important;
+}
+
+.table tr {
+  border-radius: 20px;
+}
+
+tr td:nth-child(n+5),
+tr th:nth-child(n+5) {
+  border-radius: 0 .625rem .625rem 0;
+}
+
+tr td:nth-child(1),
+tr th:nth-child(1) {
+  border-radius: .625rem 0 0 .625rem;
+}
+
+#footer-section{
+  background-image: url('https://images.unsplash.com/photo-1687851898832-650714860119?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
