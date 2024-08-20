@@ -18,41 +18,53 @@
 
 <body>
     <header class="w-full flex justify-center ">
-        <nav class="w-11/12 flex gap-3 rounded-2xl flex-col md:flex-row items-center justify-between text-cyan-50 my-3 p-3 md:rounded-full" id="nav-section">
+        <nav class="w-11/12 flex gap-3 rounded-2xl flex-col md:flex-row items-center justify-between text-cyan-50 my-3 p-3 md:rounded-full"
+            id="nav-section">
             <span
                 class="bg-orange-500 rounded-full p-3 font-medium text-lg sm:text-3xl h-full flex items-center new-amsterdam-regular">SIDDHESH
                 DANDEKAR</span>
             <h1 class="bg-white rounded-full p-3 font-bold title text-lg sm:text-2xl">Student Registration System</h1>
         </nav>
     </header>
+
+
+    <!-- THIS SECTION IS MAIN WHICH INCLUDES OUR FORM AND LIST -->
     <main class="w-full flex justify-center">
         <section id="main-section" class=" my-3 bg-slate-800 w-11/12 h-f rounded-3xl flex justify-between flex-wrap">
+
+
+            <!-- THIS IS AN FORM SECTION -->
             <div id="form-side" class="max-w-md py-10 m-auto flex">
                 <div class="p-8 rounded-2xl border border-gray-200 bg-white ">
                     <h1 class="font-medium text-3xl">Registration Form</h1>
                     <!-- <p class="text-gray-600 mt-6">Student Registration Form</p> -->
                     <div class="mt-8 space-y-6">
-                        <div> <label for="name" class="text-sm text-gray-700 block mb-1 font-medium">Student
-                                Name</label>
-                            <input type="text" name="name" id="name"
-                                class="bg-gray-100 border border-gray-200 rounded py-1 px-3 block focus:ring-blue-500 focus:border-blue-500 text-gray-700 w-full"
-                                placeholder="Enter your name" required />
-                        </div>
-                        <div> <label for="student-id" class="text-sm text-gray-700 block mb-1 font-medium">Student
-                                ID</label> 
-                            <input type="text" name="student-id" id="student-id"
-                                class="bg-gray-100 border border-gray-200 rounded py-1 px-3 block focus:ring-blue-500 focus:border-blue-500 text-gray-700 w-full"
-                                placeholder="(ex. S0001)" required/> </div>
-                        <div> <label for="class" class="text-sm text-gray-700 block mb-1 font-medium">Class</label>
-                            <input type="number" name="class" id="class"
-                                class="bg-gray-100 border border-gray-200 rounded py-1 px-3 block focus:ring-blue-500 focus:border-blue-500 text-gray-700 w-full"
-                                placeholder="(ex. 5th)" required/>
-                        </div>
-                        <div> <label for="roll" class="text-sm text-gray-700 block mb-1 font-medium">Roll No.</label>
-                            <input type="number" name="roll" id="roll"
-                                class="bg-gray-100 border border-gray-200 rounded py-1 px-3 block focus:ring-blue-500 focus:border-blue-500 text-gray-700 w-full"
-                                placeholder="(ex. 1)" required/>
-                        </div>
+                        <form id="myform" >
+                            <div> <label for="name" class="text-sm text-gray-700 block mb-1 font-medium">Student
+                                    Name</label>
+                                <input type="text" name="name" id="name"
+                                    class="bg-gray-100 border border-gray-200 rounded py-1 px-3 block focus:ring-blue-500 focus:border-blue-500 text-gray-700 w-full"
+                                    placeholder="Enter your name" required />
+                            </div>
+                            <div> <label for="student-id" class="text-sm text-gray-700 block mb-1 font-medium">Student
+                                    ID</label>
+                                <input type="text" name="student-id" id="student-id"
+                                    class="bg-gray-100 border border-gray-200 rounded py-1 px-3 block focus:ring-blue-500 focus:border-blue-500 text-gray-700 w-full"
+                                    placeholder="(ex. S0001)" required />
+                            </div>
+                            <div> <label for="studentemail" class="text-sm text-gray-700 block mb-1 font-medium">Email
+                                    ID</label>
+                                <input type="email" name="studentemail" id="studentemail"
+                                    class="bg-gray-100 border border-gray-200 rounded py-1 px-3 block focus:ring-blue-500 focus:border-blue-500 text-gray-700 w-full"
+                                    placeholder="xyz@gmail.com" required />
+                            </div>
+                            <div> <label for="phoneNumber" class="text-sm text-gray-700 block mb-1 font-medium">Contact
+                                    No.</label>
+                                <input type="number" name="phoneNumber" id="phoneNumber"
+                                    class="bg-gray-100 border border-gray-200 rounded py-1 px-3 block focus:ring-blue-500 focus:border-blue-500 text-gray-700 w-full"
+                                    placeholder="9999999999" required />
+                            </div>
+                        </form>
                     </div>
                     <div class="space-x-4 mt-8"> <button id="studentsubmit"
                             class="py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-600 active:bg-blue-700 disabled:opacity-50">Save</button>
@@ -61,6 +73,8 @@
                     </div>
                 </div>
             </div>
+
+            <!-- THIS IS AN RECORD LIST SECTION -->
             <div id="list-side" class="p-2 sm:p-10 mx-auto flex">
                 <div class="col-span-12">
                     <div class="overflow-y-auto " style="height: 90vh;">
@@ -69,8 +83,8 @@
                                 <tr>
                                     <th class="p-3">Name</th>
                                     <th class="p-3 text-left">ID</th>
-                                    <th class="p-3 text-left">Class</th>
-                                    <th class="p-3 text-left">Roll No.</th>
+                                    <th class="p-3 text-left">Email ID</th>
+                                    <th class="p-3 text-left">Contact No</th>
                                     <th class="p-3 text-left">Action</th>
                                 </tr>
                             </thead>
@@ -106,69 +120,99 @@
 
             </div>
 
-            <!--This is pop Section-->
+            <!--This is pop Section   EDIT SECTION-->
             <div id="my-pop" popover>
                 <h2>---EDIT SECTION---</h2>
                 <br>
-                <input type="text" name="editname" id="editname" ><br>
-                <input type="text" name="edit-id" id="editid" ><br>
-                <input type="number" name="edit-class" id="editclass" ><br>
-                <input type="number" name="edit-rollno" id="editrollno" ><br>
+                <input type="text" name="editname" id="editname"><br>
+                <input type="text" name="edit-id" id="editid"><br>
+                <input type="email" name="edit-email" id="editemail"><br>
+                <input type="number" name="edit-number" id="editnumber"><br>
                 <button class="bg-red-600" id="btnsubmit">submit</button>
             </div>
         </section>
     </main>
 
+    <!-- FOOTER SECTION FOR CREATIVITY -->
+
     <footer class="w-full flex justify-center">
-        <div class="w-11/12 flex gap-3 rounded-2xl flex-row items-center justify-center text-cyan-50 my-3 p-3 md:rounded- bg-cover" id="footer-section">
-            <a href="https://github.com/Siddhesh-Dandekar"><img src="data:image/png;base64,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"></a>
-            <a href="https://www.instagram.com/_siddhesshh_/"><img src="data:image/png;base64,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"></a>
-            <a href="https://x.com/its_me_siddhesh"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEc0lEQVR4nO2XyUsjURDG/UPGm9iJL4lLOu5pcSd4ET0oooKCiHhQULyLKCLePIgbiLcZBuNyURAExQW8CXFBPLggijPRiCsub6gi3bSx7bz3omEOKfgOHV/k91VXvarExcUiFrGIxX8bbrc7XlGU34qi3CiKQt1u9zvl5uZqysnJ0ZSdna0pKyvrnTIzMzVlZGRoSk9P1+RyuagsyzeyLHtlWZYigf8L4KHwLOCh8KzgLp1kWQb5ZVmO5zYQzDwTuFnWWcDTQ+CD4Cin0wn6JfIGbiIpFz04a9blj+CotLS0gIiBb69zlwG4ATyK20CU65x+Bg5KTU0VNxBJnQuWCw2FFzIQ7Tp3GmRdVUpKipiBz8Dhzfh8PmoUc3NzTHXe1tZGX19f6erqKj5/Bq6K20C4rFdXV9PHx0f69vZGl5eX6dLSEt3d3UUTXV1dplmvra2l9/f3eB4SFQoeCp+cnCxmIFydDw4OIvDY2BhmvKCggJ6dndGrqyvq8XgMywU+v7i4QHk8HtOsA7gqbgMsdQ5aW1ujLy8vtLGxEbPd1NSEpbGxsYHP+hqHwXhwcEBvb29pVVUVE7jD4UAJGWBp0JKSEur3++np6SnNy8vDbE9OTuKb6e/v1+Dh7ObmJn1+fqYtLS2G4CmfwAsZ4Bn/nZ2dCOz1etEAnIUmf3h4oBUVFWgAmhuit7eXOesOh4Pa7XYUtwHe+3x+fl5rYACurKzEJodGHR0dxb+Nj49zg9sjNcA6/mHtOD4+xgYuLi7G5hwYGNCu14WFhXfwevBkE3ibzYbiNiAy/hsaGrCB19fXtXsd6h6u2ubmZq6s24LgIEKIuAHe8T8xMYEZ7+vrw4zD27i+vsYmh6uZB9wWhBcyIDr+4cze3h59enqi5eXlmPH29nY0NT09/Q7cESbregkZYFlzQwcR9M3+/j6Wzc7ODn4PMj47O4smOjo6uMAJITQpKYnfAC84ZBo+g5UC4NVbCW4gAIYr+ejoCJs8Pz+fCZwE4YUNsKy5+ptlamoKoYeGhvB5ZWUFmxqmNADX1dXhM0xvvQFiAi5sgDXrqrq7uxF+ZmZGq+/CwkLMODQwTHaAHhkZwXM9PT1M4BEZYAGH+m5tbcV9aGtrCw3rGxTWZnVKQ7bh/Pb2Nk7psrIyJnghA0bgRvCwlN3d3dHDw0NcjY0aFN6K2sAAClsofMfn8+H/MAO3Wq0oIQPhtsWioiJ6fn5OLy8vaWlp6Yfxr9Y4zBNo4EAggCs3mIASghgeHjYFFzYQbuGCmob7HvYd+IES7lqsr6/HBoZ1GtaKxcVF3Eyh9GpqakzhhQyYrblgDNYFAIIhxXqfww8fozg5OcGBaQQesQHevYX1WgyXcWtQFosFxW2Adc39LnCrDj4iAyJ7Szhw1qxbIjEgCv4V5WL5IgM30SoXiwk4SJKka24DdrvdG+06t3wEV/VTxIBECPFHs84tH8FpYmLin4SEhB9xIkEIiSeE/CKEBKJRLpIOXJKkAGReGD4WsYhFLOKiEf8Af1P68HbF1egAAAAASUVORK5CYII="></a>
+        <div class="w-11/12 flex gap-3 rounded-2xl flex-row items-center justify-center text-cyan-50 my-3 p-3 md:rounded- bg-cover"
+            id="footer-section">
+            <a href="https://github.com/Siddhesh-Dandekar"><img
+                    src="data:image/png;base64,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"></a>
+            <a href="https://www.instagram.com/_siddhesshh_/"><img
+                    src="data:image/png;base64,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"></a>
+            <a href="https://x.com/its_me_siddhesh"><img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEc0lEQVR4nO2XyUsjURDG/UPGm9iJL4lLOu5pcSd4ET0oooKCiHhQULyLKCLePIgbiLcZBuNyURAExQW8CXFBPLggijPRiCsub6gi3bSx7bz3omEOKfgOHV/k91VXvarExcUiFrGIxX8bbrc7XlGU34qi3CiKQt1u9zvl5uZqysnJ0ZSdna0pKyvrnTIzMzVlZGRoSk9P1+RyuagsyzeyLHtlWZYigf8L4KHwLOCh8KzgLp1kWQb5ZVmO5zYQzDwTuFnWWcDTQ+CD4Cin0wn6JfIGbiIpFz04a9blj+CotLS0gIiBb69zlwG4ATyK20CU65x+Bg5KTU0VNxBJnQuWCw2FFzIQ7Tp3GmRdVUpKipiBz8Dhzfh8PmoUc3NzTHXe1tZGX19f6erqKj5/Bq6K20C4rFdXV9PHx0f69vZGl5eX6dLSEt3d3UUTXV1dplmvra2l9/f3eB4SFQoeCp+cnCxmIFydDw4OIvDY2BhmvKCggJ6dndGrqyvq8XgMywU+v7i4QHk8HtOsA7gqbgMsdQ5aW1ujLy8vtLGxEbPd1NSEpbGxsYHP+hqHwXhwcEBvb29pVVUVE7jD4UAJGWBp0JKSEur3++np6SnNy8vDbE9OTuKb6e/v1+Dh7ObmJn1+fqYtLS2G4CmfwAsZ4Bn/nZ2dCOz1etEAnIUmf3h4oBUVFWgAmhuit7eXOesOh4Pa7XYUtwHe+3x+fl5rYACurKzEJodGHR0dxb+Nj49zg9sjNcA6/mHtOD4+xgYuLi7G5hwYGNCu14WFhXfwevBkE3ibzYbiNiAy/hsaGrCB19fXtXsd6h6u2ubmZq6s24LgIEKIuAHe8T8xMYEZ7+vrw4zD27i+vsYmh6uZB9wWhBcyIDr+4cze3h59enqi5eXlmPH29nY0NT09/Q7cESbregkZYFlzQwcR9M3+/j6Wzc7ODn4PMj47O4smOjo6uMAJITQpKYnfAC84ZBo+g5UC4NVbCW4gAIYr+ejoCJs8Pz+fCZwE4YUNsKy5+ptlamoKoYeGhvB5ZWUFmxqmNADX1dXhM0xvvQFiAi5sgDXrqrq7uxF+ZmZGq+/CwkLMODQwTHaAHhkZwXM9PT1M4BEZYAGH+m5tbcV9aGtrCw3rGxTWZnVKQ7bh/Pb2Nk7psrIyJnghA0bgRvCwlN3d3dHDw0NcjY0aFN6K2sAAClsofMfn8+H/MAO3Wq0oIQPhtsWioiJ6fn5OLy8vaWlp6Yfxr9Y4zBNo4EAggCs3mIASghgeHjYFFzYQbuGCmob7HvYd+IES7lqsr6/HBoZ1GtaKxcVF3Eyh9GpqakzhhQyYrblgDNYFAIIhxXqfww8fozg5OcGBaQQesQHevYX1WgyXcWtQFosFxW2Adc39LnCrDj4iAyJ7Szhw1qxbIjEgCv4V5WL5IgM30SoXiwk4SJKka24DdrvdG+06t3wEV/VTxIBECPFHs84tH8FpYmLin4SEhB9xIkEIiSeE/CKEBKJRLpIOXJKkAGReGD4WsYhFLOKiEf8Af1P68HbF1egAAAAASUVORK5CYII="></a>
 
         </div>
     </footer>
 
     <script>
+        // CODE USED TO PREVENT FORM PAGE RELOADING
+        document.getElementById('myform').addEventListener('submit', function (event) {
+            event.preventDefault();
+            console.log('Form submitted!');
+        });
+
+
+        //FETCHING ALL THE NECESSARY VALUES
         const studentname = document.querySelector('#name');
         const studentid = document.querySelector('#student-id');
-        const studentclass = document.querySelector('#class');
-        const rollno = document.querySelector('#roll');
+        const studentemail = document.querySelector('#studentemail');
+        const phonenumber = document.querySelector('#phoneNumber');
         const button = document.querySelector('#studentsubmit');
         const tablebody = document.querySelector('#tablebody');
 
+
+        //THIS FUNCTION IS USED FOR UPDATING THE EXISTING RECORDS
+
         var latesttarget;
         const editbutton = document.querySelector("#btnsubmit");
-
         editbutton.addEventListener('click', editfunction);
 
         function editfunction() {
+
             //Latest Name
             const editedname = document.querySelector('#editname');
             const editid = document.querySelector('#editid');
-            const editclass = document.querySelector("#editclass");
-            const editrollno = document.querySelector('#editrollno');
+            const editemail = document.querySelector("#editemail");
+            const editnumber = document.querySelector('#editnumber');
 
             // Previous Name 
-            const prevname = latesttarget.querySelector('#student-name')
-            const previd = latesttarget.querySelector("#student-key")
-            const prevclass = latesttarget.querySelector("#class-id");
-            const prevrollno = latesttarget.querySelector("#studentrollno");
+            const prevname = latesttarget.querySelector('#student-name');
+            const previd = latesttarget.querySelector("#student-key");
+            const prevemail = latesttarget.querySelector("#email-id");
+            const prevnumber = latesttarget.querySelector("#studentphone");
 
+            //CHECKING VALIDATION OF DATA IF ITS EMPTY OR NOT
 
-            prevname.textContent = editedname.value;
-            previd.textContent = editid.value;
-            prevclass.textContent = editclass.value;
-            prevrollno.textContent = editrollno.value;
-            console.log(prevname.textContent);
-
+            if (editedname.value && editid.value && editemail.value && editnumber.value) {
+                //SECOND VALIDATION OF EMAIL AND NAME 
+                if(editemail.value.includes('@') && !(/\d/.test(editedname.value))){
+                prevname.textContent = editedname.value;
+                previd.textContent = editid.value;
+                prevemail.textContent = editemail.value;
+                prevnumber.textContent = editnumber.value;
+                console.log(prevname.textContent);
+                }
+                else{
+                    alert('Invalid email address or Invalid Name');
+                    event.preventDefault();
+                }
+            }
+            else {
+                alert('empty values are not allowed');
+            }
         }
 
 
-
+        // EVENT LISTENER FOR SUBMIT BUTTON 
         button.addEventListener('click', getdetails);
 
+        //THIS FUNCTION FETCHING THE VALUES ON BUTTON CLICK
         function getdetails() {
-            if (studentname.value && studentid.value && studentclass.value && rollno.value) {
+            if (studentname.value && studentid.value && studentemail.value && phonenumber.value) {
 
                 // const tabledata = document.createElement('td');
 
@@ -215,16 +259,22 @@
                 // return tablerow;
 
 
-                const tablerow = document.createElement('tr');
-                tablerow.classList.add('bg-gray-800');
+                //IGNORE THE ABOVE CODE I WAS TRYING TO EXPRIMENT BUT IT DIDN'T WORK
 
-                tablerow.innerHTML = ` <td class="p-3">
+
+                // SECOND VALIDATION OF EMAIL AND STUDENT NAME 
+
+                if (studentemail.value.includes('@') && !(/\d/.test(studentname.value))) {
+                    const tablerow = document.createElement('tr');
+                    tablerow.classList.add('bg-gray-800');
+
+                    tablerow.innerHTML = ` <td class="p-3">
                                         <div id="student-name" class="flex align-items-center">${studentname.value}</div>
                                     </td>
                                     <td id="student-key" class="p-3">${studentid.value}</td>
-                                    <td class="p-3 font-bold" id="class-id">${studentclass.value}</td>
+                                    <td class="p-3 font-bold" id="email-id">${studentemail.value}</td>
                                     <td class="p-3">
-                                        <span id="studentrollno" class="bg-green-400 text-gray-50 rounded-md px-2">${rollno.value}</span>
+                                        <span id="studentphone" class="bg-green-400 text-gray-50 rounded-md px-2">${phonenumber.value}</span>
                                     </td>
                                     <td class="p-3 ">
                                         <button class="text-gray-400 hover:text-gray-100  mx-2" popovertarget="my-pop">
@@ -235,53 +285,70 @@
                                         </button>
                                     </td>`;
 
-                console.log(tablerow);
+                    console.log(tablerow);
 
-                tablebody.appendChild(tablerow);
+                    tablebody.appendChild(tablerow);
 
-                studentname.value = '';
-                studentid.value = '';
-                studentclass.value = '';
-                rollno.value = '';
+                    // RESETING THE FORM VALUES
+
+                    studentname.value = '';
+                    studentid.value = '';
+                    studentemail.value = '';
+                    phonenumber.value = '';
+
+                }
+                else {
+                    alert('Please Enter a Valid Email address or a Valid Name');
+                    event.preventDefault();
+                }
+
 
 
             }
             else {
                 alert('Incomplete Form');
                 return;
-                
+
             }
 
         }
 
-
+        // LISTENING TO DELETE BUTTON CLICK 
         tablebody.addEventListener('click', deleteitem);
 
+        // THIS FUNCTION ELEMENT WHICH IS PRESS FOR SUPPOSE ELEMENT/TAG WITH CLASS "Trash" or "edit" is click it will perform according to it
         function deleteitem(e) {
             const item = e.target;
             console.log(item);
+
+            //TRASH CODE
             if (item.classList[0] === 'trash') {
                 const parent = item.parentElement.parentElement.parentElement;
                 parent.remove();
             }
+
+            //DATA EDITING CODE
             else if (item.classList[0] === 'edit') {
                 const editname = document.querySelector('#editname');
                 const editid = document.querySelector('#editid');
-                const editclass = document.querySelector("#editclass");
-                const editrollno = document.querySelector("#editrollno");
+                const editemail = document.querySelector("#editemail");
+                const editnumber = document.querySelector("#editnumber");
 
 
                 const parent = item.parentElement.parentElement.parentElement;
 
                 const stdname = parent.querySelector('#student-name');
                 const previd = parent.querySelector("#student-key")
-                const prevclass = parent.querySelector("#class-id");
-                const prevrollno = parent.querySelector("#studentrollno");
+                const prevemail = parent.querySelector("#email-id");
+                const prevnumber = parent.querySelector("#studentphone");
+
+                console.log(prevemail.textContent);
 
                 editname.value = stdname.textContent;
-                editclass.value = prevclass.textContent;
+                editemail.value = prevemail.textContent;
                 editid.value = previd.textContent;
-                editrollno.value = prevrollno.textContent;
+                editnumber.value = prevnumber.textContent;
+                console.log(editemail.value);
 
                 latesttarget = parent;
             }
